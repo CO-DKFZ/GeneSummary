@@ -79,7 +79,7 @@ dim(tb)
 head(tb)
 ```
 
-Setting `organism` to `NULl` returns a table of all organisms.
+Setting `organism` to `NULL` returns a table of all organisms.
 
 
 ```{r}
@@ -97,6 +97,4 @@ sort(table(tb$Review_status))
 
 ```{r}
 sessionInfo()
-```
-
 ```
