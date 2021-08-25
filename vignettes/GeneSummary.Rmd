@@ -1,0 +1,102 @@
+---
+title: "Gene Summaries from RefSeq Database"
+author: "Zuguang Gu (z.gu@dkfz.de)"
+date: '`r Sys.Date()`'
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Gene Summaries from RefSeq Database}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This package provides long description of genes collected from [the RefSeq database](https://ftp.ncbi.nih.gov/refseq/).
+The text in "COMMENT" section started with "Summary:" is extracted as the description of the gene, e.g. in the following example:
+
+```
+LOCUS       NM_012363                936 bp    mRNA    linear   PRI 12-FEB-2021
+DEFINITION  Homo sapiens olfactory receptor family 1 subfamily N member 1
+            (OR1N1), mRNA.
+ACCESSION   NM_012363 XM_071152
+VERSION     NM_012363.1
+KEYWORDS    RefSeq; MANE Select.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 936)
+  AUTHORS   Malnic B, Godfrey PA and Buck LB.
+  TITLE     The human olfactory receptor gene family
+  JOURNAL   Proc Natl Acad Sci U S A 101 (8), 2584-2589 (2004)
+   PUBMED   14983052
+  REMARK    Erratum:[Proc Natl Acad Sci U S A. 2004 May 4;101(18):7205]
+REFERENCE   2  (bases 1 to 936)
+  AUTHORS   Fuchs T, Malecova B, Linhart C, Sharan R, Khen M, Herwig R,
+            Shmulevich D, Elkon R, Steinfath M, O'Brien JK, Radelof U, Lehrach
+            H, Lancet D and Shamir R.
+  TITLE     DEFOG: a practical scheme for deciphering families of genes
+  JOURNAL   Genomics 80 (3), 295-302 (2002)
+   PUBMED   12213199
+REFERENCE   3  (bases 1 to 936)
+  AUTHORS   Rouquier S, Taviaux S, Trask BJ, Brand-Arpon V, van den Engh G,
+            Demaille J and Giorgi D.
+  TITLE     Distribution of olfactory receptor genes in the human genome
+  JOURNAL   Nat Genet 18 (3), 243-250 (1998)
+   PUBMED   9500546
+  REMARK    Erratum:[Nat Genet 1998 May;19(1):102]
+COMMENT     REVIEWED REFSEQ: This record has been curated by NCBI staff. The
+            reference sequence was derived from AL359636.17.
+            On Apr 5, 2004 this sequence version replaced XM_071152.1.
+            
+            Summary: Olfactory receptors interact with odorant molecules in the
+            nose, to initiate a neuronal response that triggers the perception
+            of a smell. The olfactory receptor proteins are members of a large
+            family of G-protein-coupled receptors (GPCR) arising from single
+            coding-exon genes. Olfactory receptors share a 7-transmembrane
+            domain structure with many neurotransmitter and hormone receptors
+            and are responsible for the recognition and G protein-mediated
+            transduction of odorant signals. The olfactory receptor gene family
+            is the largest in the genome. The nomenclature assigned to the
+            olfactory receptor genes and proteins for this organism is
+            independent of other organisms. [provided by RefSeq, Jul 2008].
+            
+            ##RefSeq-Attributes-START##
+            MANE Ensembl match     :: ENST00000304880.2/ ENSP00000306974.2
+            RefSeq Select criteria :: based on single protein-coding transcript
+            ##RefSeq-Attributes-END##
+```
+
+Function `loadGeneSummary()` extracts the gene summary table. Specifying the
+`organism` argument with the full name or the corresponding taxon ID returns a
+table of genes and their summaries:
+
+```{r}
+library(GeneSummary)
+tb = loadGeneSummary(organism = 9606)
+# # or use the full organism name
+# tb = loadGeneSummary(organism = "Homo sapiens")
+dim(tb)
+head(tb)
+```
+
+Setting `organism` to `NULl` returns a table of all organisms.
+
+
+```{r}
+tb = loadGeneSummary(organism = NULL)
+sort(table(tb$Organism))
+sort(table(tb$Review_status))
+```
+
+Argument `status` can be only set to `"reviewed"`:
+
+```{r}
+tb = loadGeneSummary(organism = NULL, status = "reviewed")
+sort(table(tb$Review_status))
+```
+
+```{r}
+sessionInfo()
+```
+
+```

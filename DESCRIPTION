@@ -1,0 +1,15 @@
+Package: GeneSummary
+Type: Package
+Title: RefSeq Gene Summaries
+Version: 0.99.0
+Date: 2021-08-25
+Author: Zuguang Gu
+Maintainer: Zuguang Gu <z.gu@dkfz.de>
+Depends: R (>= 3.5.0)
+Suggests: knitr, rmarkdown, markdown
+biocViews: Software, Infrastructure
+Description: It provides gene summaries/descriptions extracted from RefSeq database.
+VignetteBuilder: knitr
+URL: https://github.com/jokergoo/GeneSummary
+License: MIT + file LICENSE
+NeedsCompilation: no
