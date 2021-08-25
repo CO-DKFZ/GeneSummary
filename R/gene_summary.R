@@ -62,5 +62,7 @@ loadGeneSummary = function(organism = 9606,
 		"validated" = "VALIDATED REFSEQ",
 		"provisional" = "PROVISIONAL REFSEQ")
 	status = status_map[status]
-	tb[tb$Review_status %in% status, , drop = FALSE]
+	tb = tb[tb$Review_status %in% status, , drop = FALSE]
+    rownames(tb) = NULL
+    tb
 }
