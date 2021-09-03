@@ -11,8 +11,8 @@ This package provides long description of genes collected from
 **GeneSummary** is available on [Bioconductor](https://bioconductor.org/packages/GeneSummary/), you can install it by:
 
 ```r
-if (!requireNamespace("GeneSummary", quietly = TRUE))
-    install.packages("GeneSummary")
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
 BiocManager::install("GeneSummary")
 ```
 
@@ -20,7 +20,7 @@ If you want the latest version, install it directly from GitHub:
 
 
 ```r
-if (!requireNamespace("GeneSummary", quietly = TRUE))
+if (!requireNamespace("devtools", quietly = TRUE))
     install.packages("devtools")
 devtools::install_github("jokergoo/GeneSummary")
 ```
