@@ -7,6 +7,18 @@ This package provides long description of genes collected from
 
 ### Install
 
+
+**GeneSummary** is available on [Bioconductor](https://bioconductor.org/packages/GeneSummary/), you can install it by:
+
+```r
+if (!requireNamespace("GeneSummary", quietly = TRUE))
+    install.packages("GeneSummary")
+BiocManager::install("GeneSummary")
+```
+
+If you want the latest version, install it directly from GitHub:
+
+
 ```r
 if (!requireNamespace("GeneSummary", quietly = TRUE))
     install.packages("devtools")

@@ -1,0 +1,5 @@
+### Version 0.99.2
+
+- Script name is changed to be consistent to the function name.
+- Add the BugReports field in DESCRIPTION file.
+- improved the vignette.

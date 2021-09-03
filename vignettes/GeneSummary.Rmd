@@ -88,7 +88,7 @@ sort(table(tb$Organism))
 sort(table(tb$Review_status))
 ```
 
-Argument `status` can be only set to `"reviewed"`:
+A specific status can be set via argument `status`, e.g. only to `"reviewed"`:
 
 ```{r}
 tb = loadGeneSummary(organism = NULL, status = "reviewed")

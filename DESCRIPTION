@@ -1,8 +1,8 @@
 Package: GeneSummary
 Type: Package
 Title: RefSeq Gene Summaries
-Version: 0.99.1
-Date: 2021-09-01
+Version: 0.99.2
+Date: 2021-09-03
 Authors@R: person("Zuguang", "Gu", email = "z.gu@dkfz.de", role = c("aut", "cre"),
                   comment = c('ORCID'="0000-0002-7395-8709"))
 Depends: R (>= 4.1)
@@ -14,5 +14,6 @@ Description: This package provides long description of genes collected from
     can be used for analysis such as text mining.
 VignetteBuilder: knitr
 URL: https://github.com/jokergoo/GeneSummary
+BugReports: https://github.com/jokergoo/GeneSummary/issues
 License: MIT + file LICENSE
 NeedsCompilation: no
