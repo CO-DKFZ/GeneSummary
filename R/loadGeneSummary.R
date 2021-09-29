@@ -14,7 +14,7 @@ cache = new.env()
 #
 # The Perl script used to parse ``*rna.gbff.gz`` files is available in ``system.file("extdata", "parse_refseq.pl", package = "GeneSummary")``.
 #
-# The data is based on RefSeq release 207 (https://ftp.ncbi.nih.gov/refseq/release/RELEASE_NUMBER ).
+# The data is based on RefSeq release 208 (https://ftp.ncbi.nih.gov/refseq/release/RELEASE_NUMBER ).
 #
 # == value
 # A data frame with the following columns:

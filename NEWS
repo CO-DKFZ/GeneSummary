@@ -1,3 +1,8 @@
+### Version 0.99.3
+
+- update to RefSeq release 208
+- add script that automatically downloads all .rna.gbff.gz files.
+
 ### Version 0.99.2
 
 - Script name is changed to be consistent to the function name.

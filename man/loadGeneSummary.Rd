@@ -22,7 +22,7 @@ Gene summaries are available in the "COMMENT" section of the \code{*rna.gbff.gz}
 
 The Perl script used to parse \code{*rna.gbff.gz} files is available in \code{system.file("extdata", "parse_refseq.pl", package = "GeneSummary")}.
 
-The data is based on RefSeq release 207 (\url{https://ftp.ncbi.nih.gov/refseq/release/RELEASE_NUMBER} ).
+The data is based on RefSeq release 208 (\url{https://ftp.ncbi.nih.gov/refseq/release/RELEASE_NUMBER} ).
 }
 \value{
 A data frame with the following columns:
