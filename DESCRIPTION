@@ -1,11 +1,11 @@
 Package: GeneSummary
 Type: Package
 Title: RefSeq Gene Summaries
-Version: 0.99.3
-Date: 2021-09-28
+Version: 1.0.214
+Date: 2022-09-30
 Authors@R: person("Zuguang", "Gu", email = "z.gu@dkfz.de", role = c("aut", "cre"),
                   comment = c('ORCID'="0000-0002-7395-8709"))
-Depends: R (>= 4.1)
+Depends: R (>= 4.0)
 Suggests: knitr, rmarkdown, markdown, testthat
 biocViews: AnnotationData, Organism, Homo_sapiens
 Description: This package provides long description of genes collected from 

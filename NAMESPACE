@@ -1,3 +1,6 @@
+S3method("print", "GeneSummary_info")
+export("print.GeneSummary_info")
+export("GeneSummary")
 export("loadGeneSummary")
 
 

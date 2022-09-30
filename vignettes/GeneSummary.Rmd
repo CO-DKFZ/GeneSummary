@@ -95,6 +95,12 @@ tb = loadGeneSummary(organism = NULL, status = "reviewed")
 sort(table(tb$Review_status))
 ```
 
+Version of the data:
+
+```{r}
+GeneSummary
+```
+
 ```{r}
 sessionInfo()
 ```
