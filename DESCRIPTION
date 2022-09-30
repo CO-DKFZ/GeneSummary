@@ -1,7 +1,7 @@
 Package: GeneSummary
 Type: Package
 Title: RefSeq Gene Summaries
-Version: 1.0.214
+Version: 0.99.4
 Date: 2022-09-30
 Authors@R: person("Zuguang", "Gu", email = "z.gu@dkfz.de", role = c("aut", "cre"),
                   comment = c('ORCID'="0000-0002-7395-8709"))
